@@ -25,10 +25,7 @@ AliCG can significantly boost the performance of search engine results via the t
 
 **Instance layer**: an instance of a concept, such as a conceptual mention phrase 
 
-<object height="700" width="950" border="0" data="path/my.pdf" type="application/pdf">
-    <embed src="figs/alicg.pdf" type="application/pdf" width=800 height=800 />
-</object>
- 
+ ![cg](figs/alicg.jpg)
 
 ## Related Works 
 
@@ -46,9 +43,7 @@ There are several related works and we display them in the table bellow:
 
 We leverage both raw text and knowledge graph to construct a cognitive concept graph. We also propose a novel refine the algorithm to make cognitive concept graph completion and concept verification automatically.  
 
-<object height="700" width="950" border="0" data="path/my.pdf" type="application/pdf">
-    <embed src="figs/arc1.pdf" type="application/pdf" width=800 height=800 />
-</object>
+ ![cg](figs/arc1.jpg)
  
 
 ## How to use?
@@ -66,10 +61,7 @@ It is also possible to train concept embedding with random work or  node2vec.  Y
 
 ### 2. Conceptualized Pretraining and Finetuning 
 It is helpful to leverage conceptualize leaning as the figure shows. Those leaned contextualized concept embedding the right part of the figure will benefit downstream tasks a lot. 
-<object height="700" width="950" border="0" data="path/my.pdf" type="application/pdf">
-    <embed src="figs/concept_embedding.pdf" type="application/pdf" width=800 height=800 />
-</object>
-
+ ![cg](figs/concept_embedding.jpg)
 ## Applications 
 
 ### Pretraining with Cognitive Concept Graph
