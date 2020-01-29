@@ -25,7 +25,10 @@ AliCG can significantly boost the performance of search engine results via the t
 
 **Instance layer**: an instance of a concept, such as a conceptual mention phrase 
 
- ![cg](figs/alicg.pdf)
+<object height="700" width="950" border="0" data="path/my.pdf" type="application/pdf">
+    <embed src="figs/alicg.pdf" type="application/pdf" width=800 height=800 />
+</object>
+ 
 
 ## Related Works 
 
@@ -43,14 +46,17 @@ There are several related works and we display them in the table bellow:
 
 We leverage both raw text and knowledge graph to construct a cognitive concept graph. We also propose a novel refine the algorithm to make cognitive concept graph completion and concept verification automatically.  
 
- ![framework](figs/arc1.pdf)
+<object height="700" width="950" border="0" data="path/my.pdf" type="application/pdf">
+    <embed src="figs/arc1.pdf" type="application/pdf" width=800 height=800 />
+</object>
+ 
 
 ## How to use?
 
 The data structure of congitnve concept is show bellow(separeted by \t):
 
 ```
-盲探	{"kg_info": [{"hot": "367", "guid": "bd77432e-4654-11e5-8ba6-f80f41fb03aa"}], "concepts": [{"concept": "影视", "score": 1.0, "level": 1}, {"isA": "影视", "concept": "电影", "score": 1.0, "level": 2}, {"concept": "影视节目", "score": 0.91, "level": 3}, {"concept": "好看的搞笑电影", "score": 0.03, "level": 3}, {"concept": "犯罪悬疑的影视作品", "score": 0.01, "level": 3}, {"concept": "杜琪峰高人气作品", "score": 0.01, "level": 3}, {"concept": "经典的搞笑电影", "score": 0.01, "level": 3}, {"concept": "杜琪峰影视作品", "score": 0.01, "level": 3}, {"concept": "刘德华经典电影", "score": 0.01, "level": 3}, {"concept": "第33届香港金像奖入围影片", "score": 0.0, "level": 3}, {"concept": "同为杜琪峰导演高人气电影", "score": 0.0, "level": 3}, {"concept": "心理犯罪的影视作品", "score": 0.0, "level": 3}, {"concept": "郑秀文刘德华电影", "score": 0.0, "level": 3}, {"concept": "刘德华与郑秀文电影", "score": 0.0, "level": 3}]}
+盲探    {"kg_info": [{"hot": "367", "guid": "bd77432e-4654-11e5-8ba6-f80f41fb03aa"}], "concepts": [{"concept": "影视", "score": 1.0, "level": 1}, {"isA": "影视", "concept": "电影", "score": 1.0, "level": 2}, {"concept": "影视节目", "score": 0.91, "level": 3}, {"concept": "好看的搞笑电影", "score": 0.03, "level": 3}, {"concept": "犯罪悬疑的影视作品", "score": 0.01, "level": 3}, {"concept": "杜琪峰高人气作品", "score": 0.01, "level": 3}, {"concept": "经典的搞笑电影", "score": 0.01, "level": 3}, {"concept": "杜琪峰影视作品", "score": 0.01, "level": 3}, {"concept": "刘德华经典电影", "score": 0.01, "level": 3}, {"concept": "第33届香港金像奖入围影片", "score": 0.0, "level": 3}, {"concept": "同为杜琪峰导演高人气电影", "score": 0.0, "level": 3}, {"concept": "心理犯罪的影视作品", "score": 0.0, "level": 3}, {"concept": "郑秀文刘德华电影", "score": 0.0, "level": 3}, {"concept": "刘德华与郑秀文电影", "score": 0.0, "level": 3}]}
 ```
 
 
@@ -59,41 +65,26 @@ The data structure of congitnve concept is show bellow(separeted by \t):
 It is also possible to train concept embedding with random work or  node2vec.  You can leverage those pretrained concept embedding for downstream tasks.
 
 ### 2. Conceptualized Pretraining and Finetuning 
-It is helpful to leverage conceptualize leaning as the figure shows. Those leaned contextualized concept embedding the right part of the figure will benefit downstream tasks a lot. ![cl](figs/concept_embeddig.pdf)
+It is helpful to leverage conceptualize leaning as the figure shows. Those leaned contextualized concept embedding the right part of the figure will benefit downstream tasks a lot. 
+<object height="700" width="950" border="0" data="path/my.pdf" type="application/pdf">
+    <embed src="figs/concept_embedding.pdf" type="application/pdf" width=800 height=800 />
+</object>
 
 ## Applications 
 
 ### Pretraining with Cognitive Concept Graph
 
-There are lots of approaches that leverage knowledge for language pretraining, such see ERINE-baidu[1] and ERINE-tsinghua[2]. We also release [ChineseBLUE](https://github.com/alibaba-research/ChineseBLUE) for pretraining with knowledge in the medical domain. 
+There are lots of approaches that leverage knowledge for language pretraining, such see ERINE-baidu[1] and ERINE-tsinghua[2]. 
 
 ### Fintuneing downstream tasks
 
 It is convenient to leverage concept knowledge directly via feature concatenation for downstream tasks such as intent classification, natural language Inference, question answering, named entity recognition. 
 
-## Cite Cognitive Concept Graph
 
-Paper will be released soon.
-
-*  [Ningyu Zhang](https://zxlzr.github.io), Qianghuai Jia, Kangping Yin, Yulin Wang, Liang Dong, Feng Gao, Nengwei Hua. [ Graph: Mining Semantic Concepts for  Natural Language Understanding]()
-
-```
-@InProceedings{zhang2020conceptnet,
-  author    = {Ningyu Zhang, Qianghuai Jia, Kangping Yin, Yulin Wang, Liang Dong, Feng Gao, Nengwei Hua},
-  title     = {Alibaba Cognitive Concept Graph: Mining Semantic Concepts for  Natural Language Understanding},
-  year      = {2020},
-}
-```
-
-## Acoknowledment 
+## Acknowledgment 
 
 We also pay high respect to the "predecessors" of the concept graph include [Yago](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/yago/) from the Max Planck Institute in Germany,  [WordNet](https://wordnet.princeton.edu/) from Princeton University, [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) From google, [Microsoft Concept Graph](https://concept.research.microsoft.com/)  from Microsoft Research Asia,  [Big Cilin](http://www.bigcilin.com/browser/)  from  Harbin Institute of Technology,  [CN-dbpedia](http://kw.fudan.edu.cn/cndbpedia/intro/)   from Fudan University. 
 
-## Media Reports
-
-[将门好声音 | 阿里高级算法工程师：机器具备认知能力的“神”操作！](http://www.sohu.com/a/343244524_610522)
-
-[AICUG人工智能社区](https://www.slidestalk.com/AICUG)
 
 ## Disclaimer
 
